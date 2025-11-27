@@ -58,7 +58,7 @@ ollama pull nomic-embed-text
 Install NuGet packages
 dotnet add package UglyToad.PdfPig --prerelease
 
-In the project RagBackend/Data folder >>> Add Example Knowledge File(.txt, .pdf)
+In the project RagBackend/Data/Documents folder >>> Add Example Knowledge File(.txt, .pdf)
 Create:
 Data/Documents/example.txt
 
