@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# .NET build
+**/bin/
+**/obj/
+
+# Node / React
+RagFrontend/node_modules/
+RagFrontend/dist/
+RagFrontend/.vite/
+
+# Environment files
+**/.env
+**/*.user
+**/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
