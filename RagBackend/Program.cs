@@ -13,17 +13,6 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-//builder.Services.AddCors(options =>
-//{
-//    options.AddDefaultPolicy(policy =>
-//    {
-//        policy.AllowAnyOrigin()
-//              .AllowAnyHeader()
-//              .AllowAnyMethod();
-//    });
-//});
-
-
 
 // Register services here
 builder.Services.AddSingleton<DocumentLoader>();
@@ -31,8 +20,6 @@ builder.Services.AddSingleton<TextSplitter>();
 builder.Services.AddSingleton<EmbeddingService>();
 builder.Services.AddSingleton<VectorStore>();
 builder.Services.AddSingleton<RagService>();
-
-
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -44,7 +31,6 @@ var loader = app.Services.GetRequiredService<DocumentLoader>();
 var splitter = app.Services.GetRequiredService<TextSplitter>();
 
 var docs = loader.LoadAllDocuments();
-
 foreach (var doc in docs)
 {
     var chunks = splitter.SplitDocument(doc.FileName, doc.Content);
